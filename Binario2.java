@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Binario2{
 
   public static void main(String[] args){
-    int[] lista = {1, 2, 5, 7, 10, 13, 15, 16, 18, 21, 24, 28, 28, 31, 32, 37, 39, 43, 45, 46, 50, 52, 57, 63, 75, 77, 80, 84};
+    int[] lista = {1, 2, 5, 7, 10, 13, 15, 16, 18, 21, 24, 28, 29, 31, 32, 37, 39, 43, 45, 46, 50, 52, 57, 63, 75, 77, 80, 84};
     Scanner lectura=new Scanner(System.in);
     int num;
 
