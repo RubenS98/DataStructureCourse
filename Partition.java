@@ -18,7 +18,7 @@ public class Partition{
       System.out.println(arr.get(i));
     }
   }
-
+//Jaja
   public static int part(ArrayList<Integer> lp, int limInf, int limSup){
     int i, j, c, p, temp3;
     boolean est=true;
