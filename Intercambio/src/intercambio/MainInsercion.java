@@ -21,23 +21,27 @@ public class MainInsercion {
         
         System.out.println("");
         lp=Insercion.insercionFNacimiento(lp);
+        System.out.println("Ordenado por fecha de nacimiento.");
         m.imprimeLista(lp);
-        
         
         System.out.println("");
         lp=Insercion.insercionAPaterno(lp);
+        System.out.println("Ordenado por apellido paterno.");
         m.imprimeLista(lp);
         
         System.out.println("");
         lp=Insercion.insercionNombre(lp);
+        System.out.println("Ordenado por nombre.");
         m.imprimeLista(lp);
         
         System.out.println("");
         lp=Insercion.insercionAMaterno(lp);
+        System.out.println("Ordenado por apellido materno.");
         m.imprimeLista(lp);
         
         System.out.println("");
         lp=Insercion.insercionTel(lp);
+        System.out.println("Ordenado por telefono.");
         m.imprimeLista(lp);
         
     }

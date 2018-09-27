@@ -24,6 +24,14 @@ public class PersonaI {
         this.telefono = telefono;
         this.fNacimiento = fNacimiento;
     }
+    
+    public PersonaI(int fNacimiento) {
+        this.nombre = "Ruben";
+        this.aM = "Rodriguez";
+        this.aP = "Sanchez";
+        this.telefono = "5554183354";
+        this.fNacimiento = fNacimiento;
+    }
 
     public String getNombre() {
         return nombre;

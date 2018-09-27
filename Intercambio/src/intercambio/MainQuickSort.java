@@ -1,42 +1,27 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package intercambio;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Random;
 
 /**
  *
  * @author thepo
  */
-public class MainBurbuja {
+public class MainQuickSort {
     public static void main(String[] args){
-        MainBurbuja m=new MainBurbuja();
-        ArrayList<PersonaI> lp = m.inicializaLista();
+        MainQuickSort m=new MainQuickSort();
+        ArrayList<PersonaI> lp = m.inicializaLista2();
         m.imprimeLista(lp);
         
         System.out.println("");
-        Burbuja.burbujaFNacimiento(lp);
+        QuickSort.quickSortFNacimiento(lp, 0, lp.size()-1);
         System.out.println("Ordenado por fecha de nacimiento.");
-        m.imprimeLista(lp);
-        
-        
-        System.out.println("");
-        Burbuja.burbujaAPaterno(lp);
-        System.out.println("Ordenado por apellido paterno.");
-        m.imprimeLista(lp);
-        
-        System.out.println("");
-        Burbuja.burbujaNombre(lp);
-        System.out.println("Ordenado por nombre.");
-        m.imprimeLista(lp);
-        
-        System.out.println("");
-        Burbuja.burbujaAMaterno(lp);
-        System.out.println("Ordenado por apellido materno.");
-        m.imprimeLista(lp);
-        
-        System.out.println("");
-        Burbuja.burbujaTel(lp);
-        System.out.println("Ordenado por telefono.");
         m.imprimeLista(lp);
         
     }
@@ -65,6 +50,26 @@ public class MainBurbuja {
             fN=lectura.nextInt();
             
             PersonaI p1=new PersonaI(nombre, aP, aM, tel, fN);
+            
+            lp.add(i, p1);
+            
+        }
+        
+        return lp;
+    }
+    
+    private ArrayList<PersonaI> inicializaLista2(){
+        ArrayList<PersonaI> lp = new ArrayList<PersonaI>();
+        Scanner lectura=new Scanner(System.in);
+        int fN, tam;
+        Random r=new Random();
+        
+        System.out.println("Escriba el numero de personas: ");
+        tam=lectura.nextInt();
+        //Solicitar al usuario datos
+        for (int i = 0; i < tam; i++) {
+            fN=r.nextInt(87)+1930;
+            PersonaI p1=new PersonaI(fN);
             
             lp.add(i, p1);
             

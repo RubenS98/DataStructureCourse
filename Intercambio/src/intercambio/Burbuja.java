@@ -22,73 +22,63 @@ public class Burbuja {
                     lp.remove(j);
                     lp.add(j+1, p1);
                 }
-                
             }
-            
         }
     }
     
-    protected static void seleccionAPaterno(ArrayList<PersonaI> lp){
+    protected static void burbujaAPaterno(ArrayList<PersonaI> lp){
         int pos;
-        for (int i = 0; i < lp.size()-1; i++) {
-            PersonaI p1 = lp.get(i);
+        for (int i = 0; i < lp.size(); i++) {
             pos=i;
-            for (int j = i+1; j < lp.size(); j++) {
-                if(p1.getaP().compareToIgnoreCase(lp.get(j).getaP())>0){
-                    p1=lp.get(j);
-                    pos=j;
+            for (int j = 0; j < (lp.size()-i-1); j++) {
+                if(lp.get(j).getaP().compareToIgnoreCase(lp.get(j+1).getaP())>0){
+                    PersonaI p1=lp.get(j);
+                    lp.remove(j);
+                    lp.add(j+1, p1);
                 }
             }
-            lp.remove(pos);
-            lp.add(0+i, p1);
         }
     }
     
-    protected static void seleccionAMaterno(ArrayList<PersonaI> lp){
+    protected static void burbujaAMaterno(ArrayList<PersonaI> lp){
         int pos;
-        for (int i = 0; i < lp.size() - 1; i++) {
-            PersonaI p1 = lp.get(i);
+        for (int i = 0; i < lp.size(); i++) {
             pos=i;
-            for (int j = i+1; j < lp.size(); j++) {
-                if(p1.getaM().compareToIgnoreCase(lp.get(j).getaM())>0){
-                    p1=lp.get(j);
-                    pos=j;
+            for (int j = 0; j < (lp.size()-i-1); j++) {
+                if(lp.get(j).getaM().compareToIgnoreCase(lp.get(j+1).getaM())>0){
+                    PersonaI p1=lp.get(j);
+                    lp.remove(j);
+                    lp.add(j+1, p1);
                 }
             }
-            lp.remove(pos);
-            lp.add(0+i, p1);
         }
     }
     
-    protected static void seleccionNombre(ArrayList<PersonaI> lp){
+    protected static void burbujaNombre(ArrayList<PersonaI> lp){
         int pos;
-        for (int i = 0; i < lp.size() - 1; i++) {
-            PersonaI p1 = lp.get(i);
+        for (int i = 0; i < lp.size(); i++) {
             pos=i;
-            for (int j = i+1; j < lp.size(); j++) {
-                if(p1.getNombre().compareToIgnoreCase(lp.get(j).getNombre())>0){
-                    p1=lp.get(j);
-                    pos=j;
+            for (int j = 0; j < (lp.size()-i-1); j++) {
+                if(lp.get(j).getNombre().compareToIgnoreCase(lp.get(j+1).getNombre())>0){
+                    PersonaI p1=lp.get(j);
+                    lp.remove(j);
+                    lp.add(j+1, p1);
                 }
-            }
-            lp.remove(pos);
-            lp.add(0+i, p1);
+            } 
         }
     }
     
-    protected static void seleccionTel(ArrayList<PersonaI> lp){
+    protected static void burbujaTel(ArrayList<PersonaI> lp){
         int pos;
-        for (int i = 0; i < lp.size() - 1; i++) {
-            PersonaI p1 = lp.get(i);
+        for (int i = 0; i < lp.size(); i++) {
             pos=i;
-            for (int j = i+1; j < lp.size(); j++) {
-                if(p1.getTelefono().compareToIgnoreCase(lp.get(j).getTelefono())>0){
-                    p1=lp.get(j);
-                    pos=j;
+            for (int j = 0; j < (lp.size()-i-1); j++) {
+                if(lp.get(j).getTelefono().compareToIgnoreCase(lp.get(j+1).getTelefono())>0){
+                    PersonaI p1=lp.get(j);
+                    lp.remove(j);
+                    lp.add(j+1, p1);
                 }
             }
-            lp.remove(pos);
-            lp.add(0+i, p1);
         }
     }
 }

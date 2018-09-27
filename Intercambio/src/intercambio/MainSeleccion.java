@@ -20,22 +20,27 @@ public class MainSeleccion {
         
         System.out.println("");
         Seleccion.seleccionFNacimiento(lp);
+        System.out.println("Ordenado por fecha de nacimiento.");
         m.imprimeLista(lp);
         
         System.out.println("");
         Seleccion.seleccionAPaterno(lp);
+        System.out.println("Ordenado por apellido paterno.");
         m.imprimeLista(lp);
         
         System.out.println("");
         Seleccion.seleccionNombre(lp);
+        System.out.println("Ordenado por nombre.");
         m.imprimeLista(lp);
         
         System.out.println("");
         Seleccion.seleccionAMaterno(lp);
+        System.out.println("Ordenado por apellido materno.");
         m.imprimeLista(lp);
         
         System.out.println("");
         Seleccion.seleccionTel(lp);
+        System.out.println("Ordenado por telefono.");
         m.imprimeLista(lp);
     }
     

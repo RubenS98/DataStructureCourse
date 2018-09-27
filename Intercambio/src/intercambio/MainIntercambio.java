@@ -20,22 +20,27 @@ public class MainIntercambio {
         
         System.out.println("");
         Intercambio.intercambioFNacimiento(lp);
+        System.out.println("Ordenado por fecha de nacimiento.");
         m.imprimeLista(lp);
         
         System.out.println("");
         Intercambio.intercambioAPaterno(lp);
+        System.out.println("Ordenado por apellido paterno.");
         m.imprimeLista(lp);
         
         System.out.println("");
         Intercambio.intercambioAMaterno(lp);
+        System.out.println("Ordenado por apellido materno.");
         m.imprimeLista(lp);
         
         System.out.println("");
         Intercambio.intercambioNombre(lp);
+        System.out.println("Ordenado por nombre.");
         m.imprimeLista(lp);
         
         System.out.println("");
         Intercambio.intercambioTelefono(lp);
+        System.out.println("Ordenado por telefono.");
         m.imprimeLista(lp);
     }
     
