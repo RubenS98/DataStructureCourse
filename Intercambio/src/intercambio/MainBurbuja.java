@@ -3,10 +3,6 @@ package intercambio;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/**
- *
- * @author thepo
- */
 public class MainBurbuja {
     public static void main(String[] args){
         MainBurbuja m=new MainBurbuja();

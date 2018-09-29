@@ -1,23 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package intercambio;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author thepo
- */
+
 public class QuickSort {
     protected static void quickSortFNacimiento(ArrayList<PersonaI> lp, int limInf, int limSup){
-        int q;
+        int pP;
         if(limInf<limSup){
-            q=particionFNacimiento(lp, limInf, limSup);
-            quickSortFNacimiento(lp, limInf, q-1);
-            quickSortFNacimiento(lp, q+1, limSup);
+            pP=particionFNacimiento(lp, limInf, limSup);
+            quickSortFNacimiento(lp, limInf, pP-1);
+            quickSortFNacimiento(lp, pP+1, limSup);
             
         }
     }

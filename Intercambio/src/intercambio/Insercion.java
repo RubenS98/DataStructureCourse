@@ -2,10 +2,6 @@ package intercambio;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author thepo
- */
 public class Insercion {
     protected static ArrayList<PersonaI> insercionFNacimiento(ArrayList<PersonaI> lp){
         ArrayList<PersonaI> rem = new ArrayList<PersonaI>();

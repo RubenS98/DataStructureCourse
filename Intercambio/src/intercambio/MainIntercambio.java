@@ -1,21 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package intercambio;
 
-/**
- *
- * @author thepo
- */
+import java.util.ArrayList;
 import java.util.Scanner;
 public class MainIntercambio {
     
     
     public static void main(String[] args){
         MainIntercambio m=new MainIntercambio();
-        PersonaI [] lp = m.inicializaLista();
+        ArrayList<PersonaI> lp = m.inicializaLista();
         m.imprimeLista(lp);
         
         System.out.println("");
@@ -44,7 +36,8 @@ public class MainIntercambio {
         m.imprimeLista(lp);
     }
     
-    private PersonaI[] inicializaLista(){
+    private ArrayList<PersonaI> inicializaLista(){
+        ArrayList<PersonaI> lp = new ArrayList<PersonaI>();
         Scanner lectura=new Scanner(System.in);
         int tam;
         String nombre, aP, aM, tel;
@@ -52,8 +45,6 @@ public class MainIntercambio {
         
         System.out.println("Escriba el numero de personas: ");
         tam=lectura.nextInt();
-        
-        PersonaI [] lp=new PersonaI[tam];
         //Solicitar al usuario datos
         for (int i = 0; i < tam; i++) {
             System.out.println("Persona "+(i+1));
@@ -70,16 +61,16 @@ public class MainIntercambio {
             
             PersonaI p1=new PersonaI(nombre, aP, aM, tel, fN);
             
-            lp[i]=p1;
+            lp.add(i, p1);
             
         }
         
         return lp;
     }
     
-    private void imprimeLista(PersonaI[] lp){
-        for (int i = 0; i < lp.length; i++) {
-            System.out.println(lp[i]);
+    private void imprimeLista(ArrayList<PersonaI> lp){
+        for (int i = 0; i < lp.size(); i++) {
+            System.out.println(lp.get(i));
         }        
     }
 }
